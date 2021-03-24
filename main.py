@@ -19,6 +19,7 @@ def save_images():
     sleep(2)
     driver.find_element_by_link_text('Grafika').click()
     elements = driver.find_elements_by_class_name('rg_i')
+    print(len(elements))
     count = 0
     images_url = []
     for e in elements:
@@ -55,6 +56,6 @@ text_label.grid(row=1, column=2)
 pic_count.grid(row=2, column=2)
 tk.Button(window,text='Quit', width=10, command=window.quit).grid(row=4,column=2,sticky=tk.W,pady=4)
 tk.Button(window, text='Run', width=10, command=save_images).grid(row=4,column=0,sticky=tk.W,pady=4)
-window.geometry('600x200')
+window.geometry('600x180')
 window.title('Save images from Google by Lukasz Chmielewski, 2021')
 window.mainloop()
